@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Responsive Grid Layout</title>
+    <style>
+      body {
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(
+          to right,
+          rgb(252, 252, 171),
+          rgb(248, 153, 169)
+        );
+        font-family: sans-serif;
+      }
+
+      .main-grid {
+        margin-top: 26px;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: center;
+        padding: 2rem;
+        box-sizing: border-box;
+      }
+
+      .image-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 1rem;
+
+        width: 50%;
+        height: 40%;
+        margin-bottom: 556px;
+        margin-left: 50px;
+      }
+
+      .content-box {
+        background-color: #ff998c;
+        padding: 2rem;
+        color: white;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .content-box h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        line-height: 1.2;
+        margin: 0.5rem 0;
+      }
+
+      .content-box p {
+        margin: 0;
+        font-weight: bold;
+        font-size: 1rem;
+      }
+
+      .content-box .cta {
+        display: flex;
+        align-items: center;
+        margin-top: 1rem;
+        font-size: 1rem;
+      }
+
+      .content-box .cta span {
+        margin-right: 0.5rem;
+      }
+
+      .image-grid img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .bottom-right-image {
+        grid-row: 1 / 3;
+        grid-column: 2 / 3;
+      }
+
+      @media (max-width: 768px) {
+        .main-grid {
+          grid-template-columns: 1fr;
+          grid-template-rows: auto auto;
+          gap: 1.5rem;
+          padding: 1rem;
+        }
+
+        .image-grid {
+          grid-template-columns: 1fr;
+          grid-template-rows: auto;
+          gap: 1.5rem;
+
+          width: 90%;
+          height: auto;
+        }
+
+        .bottom-right-image {
+          grid-row: auto;
+          grid-column: auto;
+        }
+
+        .content-box {
+          padding: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-grid">
+      <div class="image-grid">
+        <img
+          src="https://images.pexels.com/photos/6752433/pexels-photo-6752433.jpeg"
+          alt="The Stage on Broadway neon sign"
+          style="width: 305px; height: 210px"
+        />
+        <img
+          src="https://images.pexels.com/photos/6141651/pexels-photo-6141651.jpeg"
+          alt="An outdoor cafe on a cobblestone street"
+          style="width: 305px; height: 210px"
+        />
+
+        <img
+          src="https://images.pexels.com/photos/3434523/pexels-photo-3434523.jpeg"
+          alt="Plates of gourmet food on a wooden table"
+          style="width: 308px; height: 436px"
+          class="bottom-right-image"
+        />
+      </div>
+
+      <div
+        class="content-box"
+        style="
+          margin-top: -526px;
+          margin-left: -20px;
+          width: 465px;
+          background-color: #ed604e;
+        "
+      >
+        <p style="color: black">LOREM IPSUM</p>
+        <h1
+          style="
+            height: 32px;
+            color: black;
+            letter-spacing: 10px;
+            font-weight: 1000;
+          "
+        >
+          LOREM IPSUM<br />SET ADEMIR
+        </h1>
+        <div class="cta">
+          <span style="color: black; font-weight: 500; margin-top: 71px"
+            >Click</span
+          ><span
+            ><img
+              style="width: 20px; margin-top: 77px"
+              src="C:\Users\chaithra\Downloads\right-arrow.png"
+          /></span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
